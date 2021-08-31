@@ -115,6 +115,17 @@ func (c *ColumnInfo) GetDefaultValue() interface{} {
 	return c.DefaultValue
 }
 
+// SetOriginDefaultValue sets the origin default value
+func (c *ColumnInfo) SetOriginDefaultValue(value interface{}) error {
+	c.OriginDefaultValue = value
+	return nil
+}
+
+// GetOriginDefaultValue gets the default value of the column.
+func (c *ColumnInfo) GetOriginDefaultValue() interface{} {
+	return c.OriginDefaultValue
+}
+
 // GetTypeDesc gets the description for column type.
 func (c *ColumnInfo) GetTypeDesc() string {
 	desc := c.FieldType.CompactStr()
